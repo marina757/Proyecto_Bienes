@@ -10,11 +10,15 @@
 }
 
 .navegacion {
-    display: none;
+    visibility: hidden;//hace que no se vea
+    opacity: 0;//es para crear transparencias
+    transition: visibility .3s ease-in-out, opacity 0.5s linear;
 
     @include tablet {
         display: flex;
         align-items: center;//manejar el centrado verticalmente
+        opacity: 1;
+        visibility: visible;
     }
 
     a {
@@ -47,5 +51,6 @@
 }
 
 .mostrar {
-    display: block;
+   visibility: visible;
+   opacity: 1;
 }
