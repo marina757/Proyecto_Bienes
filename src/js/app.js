@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() { //callback
     
     eventListeners();
+
+    darkMode();
 });
+
+function darkMode() {
+    const botonDarkMode = document.querySelector('.dark-mode-boton');
+
+    botonDarkMode.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+}
 
 function eventListeners() {
    const mobileMenu = document.querySelector('.mobile-menu');
@@ -19,6 +29,6 @@ function navegacionResponsive() {
          navegacion.classList.add('mostrar');
      }
 
-    //OPCION2 PARA HACERLO no funciona?
-    // navegacion.classList.toogle('mostrar')
+    //OPCION2 PARA HACERLO 
+    // navegacion.classList.toggle('mostrar')
 }
