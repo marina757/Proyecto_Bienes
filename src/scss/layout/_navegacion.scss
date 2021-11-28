@@ -37,7 +37,8 @@
 .navegacion {
     visibility: hidden;//hace que no se vea
     opacity: 0;//es para crear transparencias
-    transition: visibility .3s ease-in-out, opacity 0.5s linear;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear, height .5s linear;
 
     @include tablet {
         display: flex;
@@ -78,4 +79,5 @@
 .mostrar {
    visibility: visible;
    opacity: 1;
+   height: auto;
 }
